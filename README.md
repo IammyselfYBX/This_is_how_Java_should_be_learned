@@ -7,6 +7,7 @@
 
 2.类名与文件名相同
 ![p5.png](picture/p5.png)
+
 源文件中有类名值 public 的话，文件名与该类同名。
 
 3.java语言不能直接画在窗体上，必须是画布上才行，好在存在画布类
@@ -29,6 +30,7 @@ for(int i = 0 ; i < 300 ; i ++){
 ```    
 正确关系  
 ![p28.png](picture/p28.png)
+
 所以应该写成
 ```java
 class MyPanel{
@@ -70,16 +72,29 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length
 
 ## 本书实例
 1.画乌龟
+
 ![Turtle.png](Part1认识Java程序/1.2画乌龟/Turtle.png)
+
 2.漫天星星
+
 ![漫天星星](Part1认识Java程序/1.3满天星星/test1.3.png)
+
 3.飞行的小球
+
 ![](Part1认识Java程序/1.4飞行的小球/out.gif)
+
 4.小球撞墙
+
 ![](Part1认识Java程序/1.5小球撞墙/out.gif)
+
 5.下大雪
+
 ![](Part1认识Java程序/1.6下大雪/out.gif)
+
 6.键盘控制小球
+
 ![](Part1认识Java程序/1.7键盘控制小球/out.gif)
+
 7.打字游戏
+
 ![](Part1认识Java程序/1.8打字母的游戏/out.gif)

@@ -14,11 +14,14 @@ public class MyChar{
         Thread t = new Thread(mp);
         t.start();
 
+        f.addKeyListener(mp);
+        mp.addKeyListener(mp);
+
         f.setVisible(true);
     }
 }
 
-class MyPanel extends Panel implements Runnable{
+class MyPanel extends Panel implements Runnable , KeyListener{
     int x[] = new int [10];
     int y[] = new int [10];
     char c[] = new char [10];
@@ -37,6 +40,26 @@ class MyPanel extends Panel implements Runnable{
             g.drawString(new Character(c[i]).toString(), x[i], y[i]);
         }
     }
+
+    public void keyPressed(KeyEvent arg0){
+        char keyC = arg0.getKeyChar();
+        for(int i = 0; i< 10; i++){
+            if(keyC == c[i]){
+                y[i] = 0;
+                x[i] = (int)(Math.random()*300);
+                c[i] = (char)(Math.random()*26+97);
+                break;
+            }
+        }
+    }
+
+    @Override
+	public void keyReleased(KeyEvent arg0) {
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+	}
 
     public void run(){
         while(true){

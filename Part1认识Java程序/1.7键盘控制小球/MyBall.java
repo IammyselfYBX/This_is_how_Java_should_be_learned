@@ -50,12 +50,9 @@ class MyPanel extends Panel implements KeyListener{
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-		
 	}
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		
-		
 	}
 }
