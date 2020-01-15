@@ -68,7 +68,33 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length
 >
 > ```new Character(c[i]).toString()```
 
+## 第二部分 开始一个项目
+### 页面的3种布局
+#### BorderLayout——边框布局管理器
+> NORTH——北
+>
+> SOUTH——南
+>
+> WEST——西
+>
+> EAST——东
+>
+> CENTER——中间
 
+![BorderLayouttest.png](Part2开始一个项目/2.1聊天界面/test2BorderLayout/BorderLayouttest.png)
+
+#### GridLayout
+> 事先算好行列的个数，从左到右，从上到下
+
+![GridLayout.png](Part2开始一个项目/2.1聊天界面/test3GridLayout/GridLayout.png)
+
+#### FlowLayout
+> 往中间排，一排不够换下一排
+
+![FlowLayout1](Part2开始一个项目/2.1聊天界面/test4FlowLayout/FlowLayout1.png)
+![FlowLayout2](Part2开始一个项目/2.1聊天界面/test4FlowLayout/FlowLayout2.png)
+![FlowLayout3](Part2开始一个项目/2.1聊天界面/test4FlowLayout/FlowLayout3.png)
+![FlowLayout4](Part2开始一个项目/2.1聊天界面/test4FlowLayout/FlowLayout4.png)
 
 ## 本书实例
 1.画乌龟
@@ -98,3 +124,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length
 7.打字游戏
 
 ![](Part1认识Java程序/1.8打字母的游戏/out.gif)
+
+8.鼠标控制小球
+
+![](Part1认识Java程序/1.9鼠标控制小球/out.gif)

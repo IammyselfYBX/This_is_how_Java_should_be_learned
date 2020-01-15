@@ -1,3 +1,8 @@
+/**
+ * 之前使用的 awt 其实已经被淘汰了，
+ * 现在使用的是 javax.swing.*;
+ * 通常境况是前面加上一个 “J”
+ */
 import java.awt.*;
 import javax.swing.*;
 

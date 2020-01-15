@@ -8,18 +8,16 @@
 		
 			w.setSize(250 , 125) ;
 			
-			//new×é¼þ
-			JLabel labUser = new JLabel("ÓÃ»§Ãû") ;
-			JLabel labPass = new JLabel("ÃÜÂë") ;
+			JLabel labUser = new JLabel("ï¿½Ã»ï¿½ï¿½ï¿½") ;
+			JLabel labPass = new JLabel("ï¿½ï¿½ï¿½ï¿½") ;
 			
 			JTextField txtUser = new JTextField() ;
 			JPasswordField txtPass = new JPasswordField() ;
 			
-			JButton btnLogin = new JButton("µÇÂ½") ;
-			JButton btnReg = new JButton("×¢²á") ;
-			JButton btnCancel = new JButton("È¡Ïû") ;
+			JButton btnLogin = new JButton("ï¿½ï¿½Â½") ;
+			JButton btnReg = new JButton("×¢ï¿½ï¿½") ;
+			JButton btnCancel = new JButton("È¡ï¿½ï¿½") ;
 			
-			//²¼ÖÃÊäÈëÃæ°å
 			JPanel panInput = new JPanel() ;
 			panInput.setLayout(new GridLayout(2 , 2)) ;
 			
@@ -29,7 +27,6 @@
 			panInput.add(labPass) ;
 			panInput.add(txtPass) ;
 			
-			//²¼ÖÃ°´Å¥Ãæ°å
 			JPanel panButton = new JPanel() ;
 			panButton.setLayout(new FlowLayout()) ;
 			
@@ -37,7 +34,6 @@
 	 		panButton.add(btnReg) ;
 	 		panButton.add(btnCancel) ;
 	 		
-	 		//²¼ÖÃ´°Ìå
 	 		w.setLayout(new BorderLayout()) ;
 	 		
 	 		w.add(panInput , BorderLayout.CENTER) ;
