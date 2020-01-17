@@ -7,31 +7,31 @@ public class QQMain {
 		
 		w.setSize(300 , 400) ;
 		
-		//new×é¼ş
+		//newç»„ä»¶
 		JTextField txtMess = new JTextField() ;
 		
 		JComboBox cmbUser = new JComboBox() ;
-		JButton btnSend = new JButton("·¢ËÍ") ;
+		JButton btnSend = new JButton("å‘é€") ;
 		
 		JTextArea txtContent = new JTextArea() ;
-		//ÉèÖÃ¹ö¶¯Ìõ
+		//è®¾ç½®æ»šåŠ¨æ¡
 		JScrollPane spContent = new JScrollPane(txtContent) ;
 		
-		//²¼ÖÃĞ¡Ãæ°å
+		//å¸ƒç½®å°é¢æ¿
 		JPanel panSmall = new JPanel() ;
 		panSmall.setLayout(new GridLayout(1 , 2)) ;
 		
 		panSmall.add(cmbUser) ;
 		panSmall.add(btnSend) ;
 		
-		//²¼ÖÃ´óÃæ°å
+		//å¸ƒç½®å¤§é¢æ¿
 		JPanel panBig = new JPanel() ;
 		panBig.setLayout(new GridLayout(2 , 1)) ;
 		
 		panBig.add(txtMess) ;
 		panBig.add(panSmall) ;
 		
- 		//²¼ÖÃ´°Ìå
+ 		//å¸ƒç½®çª—ä½“
 		w.setLayout(new BorderLayout()) ;
 		
 		w.add(panBig , BorderLayout.NORTH) ;

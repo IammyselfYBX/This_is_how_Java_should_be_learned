@@ -9,20 +9,20 @@ public class QQLogin extends JFrame implements ActionListener {
 	public QQLogin() {
 		this.setSize(250 , 125) ;
 		
-		//new×é¼ş
-		JLabel labUser = new JLabel("ÓÃ»§Ãû") ;
-		JLabel labPass = new JLabel("ÃÜÂë") ;
+		//newç»„ä»¶
+		JLabel labUser = new JLabel("ç”¨æˆ·å") ;
+		JLabel labPass = new JLabel("å¯†ç ") ;
 		
-		JButton btnLogin = new JButton("µÇÂ½") ;
-		JButton btnReg = new JButton("×¢²á") ;
-		JButton btnCancel = new JButton("È¡Ïû") ;
+		JButton btnLogin = new JButton("ç™»å…¥") ;
+		JButton btnReg = new JButton("æ³¨å†Œ") ;
+		JButton btnCancel = new JButton("å–æ¶ˆ") ;
 		
-		//×¢²áÊÂ¼ş¼àÌı
+		//æ³¨å†Œæ—¶é—´ç›‘å¬
 		btnLogin.addActionListener(this) ;
 		btnReg.addActionListener(this) ;
 		btnCancel.addActionListener(this) ;
 		
-		//²¼ÖÃÊäÈëÃæ°å
+		//å¸ƒç½®è¾“å…¥é¢æ¿
 		JPanel panInput = new JPanel() ;
 		panInput.setLayout(new GridLayout(2 , 2)) ;
 		
@@ -32,7 +32,7 @@ public class QQLogin extends JFrame implements ActionListener {
 		panInput.add(labPass) ;
 		panInput.add(txtPass) ;
 		
-		//²¼ÖÃ°´Å¥Ãæ°å
+		//å¸ƒç½®æŒ‰é’®é¢æ¿
 		JPanel panButton = new JPanel() ;
 		panButton.setLayout(new FlowLayout()) ;
 		
@@ -40,7 +40,7 @@ public class QQLogin extends JFrame implements ActionListener {
  		panButton.add(btnReg) ;
  		panButton.add(btnCancel) ;
  		
- 		//²¼ÖÃ´°Ìå
+ 		//å¸ƒç½®çª—ä½“
  		this.setLayout(new BorderLayout()) ;
  		
  		this.add(panInput , BorderLayout.CENTER) ;
@@ -54,15 +54,16 @@ public class QQLogin extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		if(arg0.getActionCommand().equals("µÇÂ½")){
+		if(arg0.getActionCommand().equals("ç™»å…¥")){
+			System.out.println("ç”¨æˆ·ç‚¹äº†ç™»å…¥") ;
 			String u = txtUser.getText() ;
 			String p = txtPass.getText() ;
 		}
-		if(arg0.getActionCommand().equals("×¢²á")){
-			System.out.println("ÓÃ»§µãÁË×¢²á") ;
+		if(arg0.getActionCommand().equals("æ³¨å†Œ")){
+			System.out.println("ç”¨æˆ·ç‚¹äº†æ³¨å†Œ") ;
 		}
-		if(arg0.getActionCommand().equals("È¡Ïû")){
-			System.out.println("ÓÃ»§µãÁËÈ¡Ïû") ;
+		if(arg0.getActionCommand().equals("å–æ¶ˆ")){
+			System.out.println("ç”¨æˆ·ç‚¹äº†å–æ¶ˆ") ;
 		}
 	}
 }

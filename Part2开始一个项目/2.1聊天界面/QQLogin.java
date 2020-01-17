@@ -8,15 +8,15 @@
 		
 			w.setSize(250 , 125) ;
 			
-			JLabel labUser = new JLabel("�û���") ;
-			JLabel labPass = new JLabel("����") ;
+			JLabel labUser = new JLabel("用户名") ;
+			JLabel labPass = new JLabel("密码") ;
 			
 			JTextField txtUser = new JTextField() ;
 			JPasswordField txtPass = new JPasswordField() ;
 			
-			JButton btnLogin = new JButton("��½") ;
-			JButton btnReg = new JButton("ע��") ;
-			JButton btnCancel = new JButton("ȡ��") ;
+			JButton btnLogin = new JButton("登入") ;
+			JButton btnReg = new JButton("注册") ;
+			JButton btnCancel = new JButton("取消") ;
 			
 			JPanel panInput = new JPanel() ;
 			panInput.setLayout(new GridLayout(2 , 2)) ;
