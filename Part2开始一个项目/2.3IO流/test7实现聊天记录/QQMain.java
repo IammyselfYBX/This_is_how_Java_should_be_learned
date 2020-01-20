@@ -10,37 +10,37 @@ public class QQMain extends JFrame implements ActionListener{
 	QQMain(){
 		this.setSize(300 , 400) ;
 		
-		//new×é¼ş
-		JButton btnSend = new JButton("·¢ËÍ") ;
+		//newï¿½ï¿½ï¿½
+		JButton btnSend = new JButton("ï¿½ï¿½ï¿½ï¿½") ;
 		
 		JScrollPane spContent = new JScrollPane(txtContent) ;
 		
-		//×¢²áÊÂ¼ş¼àÌı
+		//×¢ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		btnSend.addActionListener(this) ;
 		
-		//²¼ÖÃĞ¡Ãæ°å
+		//ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½
 		JPanel panSmall = new JPanel() ;
 		panSmall.setLayout(new GridLayout(1 , 2)) ;
 		
 		panSmall.add(cmbUser) ;
 		panSmall.add(btnSend) ;
 		
-		//²¼ÖÃ´óÃæ°å
+		//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½
 		JPanel panBig = new JPanel() ;
 		panBig.setLayout(new GridLayout(2 , 1)) ;
 		
 		panBig.add(txtMess) ;
 		panBig.add(panSmall) ;
 		
- 		//²¼ÖÃ´°Ìå
+ 		//å¸ƒç½®çª—å£
 		this.setLayout(new BorderLayout()) ;
 		
 		this.add(panBig , BorderLayout.NORTH) ;
 		this.add(spContent , BorderLayout.CENTER) ;
 
-		//¶ÁÁÄÌì¼ÇÂ¼
+		//è¯»å–èŠå¤©è®°å½•
 		try{
-			File f = new File("c:/work/ÁÄÌì¼ÇÂ¼.qq") ;
+			File f = new File("c:/work/èŠå¤©è®°å½•.qq") ;
 			
 			FileReader fr = new FileReader(f) ;
 			BufferedReader br = new BufferedReader(fr) ;
@@ -53,12 +53,13 @@ public class QQMain extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
+		// å°† txtMess æ”¾åˆ° txtContent ä¸­
 		// txtMess -------> txtContent
 		txtContent.append(txtMess.getText()+"\n") ;
 		
-		// ½«txtMessµÄÄÚÈİ´æÈëÁÄÌì¼ÇÂ¼ÎÄ¼ş
+		// å°† txtMess çš„å†…å®¹å­˜å…¥èŠå¤©è®°å½•æ–‡ä»¶
 		try{
-			File f = new File("c:/work/ÁÄÌì¼ÇÂ¼.qq") ;
+			File f = new File("c:/work/èŠå¤©è®°å½•.qq") ;
 			
 			FileWriter fw = new FileWriter(f) ;
 			PrintWriter pw = new PrintWriter(fw) ;
@@ -68,7 +69,7 @@ public class QQMain extends JFrame implements ActionListener{
 			pw.close() ;
 		}catch(Exception e){}
 		
-		// Çå³ıtxtMessÖĞµÄÄÚÈİ
+		// æ¸…é™¤ txtMess ä¸­çš„å†…å®¹
 		txtMess.setText("") ;		
 	}
 }

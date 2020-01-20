@@ -35,6 +35,8 @@ public class QQLogin implements ActionListener{
         jf.add(panButton, BorderLayout.SOUTH);
 
         //register Event
+        //parameter is an object that implements an interface class
+        //QQLogin implements interface class
         QQLogin e = new QQLogin();
         btnLogin.addActionListener(e);
         btnReg.addActionListener(e);

@@ -1,16 +1,20 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+ * 输入用户名与密码，
+ * 点击 Login 在 Terminal 里面显示用户名与密码
+ */
 
-public class MyTest implements ActionListener{
-    public static void main(String args[]){
-        JFrame jf = new JFrame();
-        jf.setSize(300, 125);
+public class QQLogin extends JFrame implements ActionListener{
+    JTextField txtUser = new JTextField();
+    JPasswordField txtPass = new JPasswordField();
 
+    public QQLogin(){
+        this.setSize(300, 125);
         JLabel labUser = new JLabel("User name");
         JLabel labPass = new JLabel("Password");
-        JTextField txtUser = new JTextField();
-        JPasswordField txtPass = new JPasswordField();
+        
 
         JPanel input = new JPanel();
         input.setLayout(new GridLayout(2,2));
@@ -28,21 +32,30 @@ public class MyTest implements ActionListener{
         jbp.add(jb2);
         jbp.add(jb3);
 
-        jf.setLayout(new BorderLayout());
-        jf.add(input, BorderLayout.NORTH);
-        jf.add(jbp, BorderLayout.SOUTH);
+        this.setLayout(new BorderLayout());
+        this.add(input, BorderLayout.NORTH);
+        this.add(jbp, BorderLayout.SOUTH);
 
-        MyTest mt = new MyTest();
-        jb1.addActionListener(mt);
-        jb2.addActionListener(mt);
-        jb3.addActionListener(mt);
-
-        jf.setVisible(true);
+        jb1.addActionListener(this);
+        jb2.addActionListener(this);
+        jb3.addActionListener(this);
+    }
+    public static void main(String args[]){
+        QQLogin jf = new QQLogin();
+        jf.setVisible(true);        
     }
 
     public void actionPerformed(ActionEvent e){
         if(e.getActionCommand().equals("Login")){
             System.out.println("Click Login");
+            
+            String name = txtUser.getText();
+            String password = String.valueOf(txtPass.getPassword());
+            if(name.equals("aaa")&&password.equals("111")){
+                QQMain w = new QQMain();
+                w.setVisible(true);
+                this.setVisible(false);
+            }
         }
         if(e.getActionCommand().equals("Register")){
             System.out.println("Click Register");

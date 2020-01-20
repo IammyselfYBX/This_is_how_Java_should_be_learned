@@ -150,7 +150,42 @@ A c = new B();
 ```
 这句话之后，结果是父类的成员变量，子类的方法。
 
-![Test](Part2开始一个项目/2.2响应用户输入/test8上溯与下溯的讨论/test2a&b/Mytest.png)
+![Test](Part2开始一个项目/2.2响应用户输入/test8上溯与下溯的讨论/Mytest.png)
+
+#### 3.面向对象思想来编写代码
+[取得用户名和密码](Part2开始一个项目/2.2响应用户输入/test7取得用户名和密码以及采用面向对象思想重写/MyTest.java)
+
+![MyTest](Part2开始一个项目/2.2响应用户输入/test7取得用户名和密码以及采用面向对象思想重写/MyTest.png)
+
+假定用户名是 aaa， 密码是123，登入响应
+
+![Login响应.gif](Part2开始一个项目/2.3IO流/test7实现聊天记录/test1Button响应/Login响应.gif)
+
+#### 4.面向对象中不应该引用另一个 class 中的成员变量，而应该是成员方法
+[将聊天信息发送到服务器](Part2开始一个项目/2.4建立网络通讯/test3将聊天信息发送到服务器/test1引用变量/QQLogin.java)在 ``` test1引用变量 ```中引用变量不符合面向对象的思想
+```java
+//QQMain.java
+	Socket s
+//QQLogin.java
+	QQMain w = new QQMain();
+	w.s = s;		//错误用法
+	w.setVisible(true);
+```
+
+正确用法
+```java
+//QQMain
+	private Socket s;
+	public void setSocket(Socket value){
+		s = value;
+	}
+
+//QQLogin.java
+	QQMian w = new QQMain();
+	w.setSocket(s);
+	w.setVisible(true);
+```
+
 
 ### 四、I/O流
 语句是对CPU的操作，程序是在内存里面，操作内存比较方便，但是操作外设(键盘，硬盘，打印机，网络)就比较麻烦，程序想与他们打交道，需要用到**I/O流**
@@ -222,6 +257,10 @@ public class MyReadFile {
 为了解决这个问题，需要提出——字符流
 
 ![Key](Part2开始一个项目/2.3IO流/test6字符流/test3秘钥加密/MyKey.png)
+
+
+
+
 
 ---
 ## 本书实例
