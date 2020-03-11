@@ -5,15 +5,15 @@ import java.sql.* ;
 public class QQServer {
 	public static void main(String[] args) {
 		try {
-			// ·şÎñÆ÷ÔÚ8000¶Ë¿Ú¼àÌı
+			// æœåŠ¡å™¨åœ¨8000ç«¯å£ç›‘å¬
 			ServerSocket ss = new ServerSocket(8000);
 
 			while (true) {
-				System.out.println("·şÎñÆ÷ÕıÔÚ8000¶Ë¿Ú¼àÌı......");
+				System.out.println("æœåŠ¡å™¨æ­£åœ¨3306ç«¯å£ç›‘å¬......");
 				Socket s = ss.accept();
 
 				MyService t = new MyService();
-				t.setSocket(s);
+				t.setSocket(s);	//å°†QQServerä¸­çš„ s ä¼ é€’åˆ° MyService ä¸­ã€‚
 				t.start();
 			}
 		} catch (Exception e) {
@@ -28,14 +28,14 @@ class MyService extends Thread {
 	}
 	public void run() {
 		try{
-			// ½ÓÊÜÓÃ»§ÃûºÍÃÜÂë
+			// æ¥å—ç”¨æˆ·åå’Œå¯†ç 
 			InputStream is = s.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is);
 			BufferedReader br = new BufferedReader(isr);
 	
 			String uandp = br.readLine();
 	
-			// ²ğ·ÖÓÃ»§ÃûºÍÃÜÂë
+			// æ‹†åˆ†ç”¨æˆ·åå’Œå¯†ç 
 			String u = uandp.split("%")[0];
 			String p = uandp.split("%")[1];
 	
@@ -43,9 +43,9 @@ class MyService extends Thread {
 			OutputStreamWriter osw = new OutputStreamWriter(os);
 			PrintWriter pw = new PrintWriter(osw, true);
 			
-			//µ½Êı¾İ¿âÖĞÑéÖ¤ÓÃ»§Éí·İ
-			Class.forName("org.gjt.mm.mysql.Driver") ;
-			Connection cn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/qq","root","123456") ;
+			//åˆ°æ•°æ®åº“ä¸­éªŒè¯ç”¨æˆ·èº«ä»½
+			Class.forName("org.mariadb.jdbc.Driver") ;
+			Connection cn = DriverManager.getConnection("jdbc:mysql://0.0.0.0:3306/QQ","tony","12345") ;
 			PreparedStatement ps = cn.prepareStatement("select * from user where username=? and password=?") ;
 			ps.setString(1, u) ;
 			ps.setString(2, p) ;
@@ -53,17 +53,17 @@ class MyService extends Thread {
 			ResultSet rs = ps.executeQuery() ;
 			
 			if (rs.next()) {
-				// ·¢ËÍÕıÈ·ĞÅÏ¢µ½¿Í»§¶Ë
+				// å‘é€æ­£ç¡®ä¿¡æ¯åˆ°å®¢æˆ·ç«¯
 				pw.println("ok");
 	
-				//²»¶ÏµØ½ÓÊÕ¿Í»§¶Ë·¢ËÍ¹ıÀ´µÄĞÅÏ¢
+				//ä¸æ–­åœ°æ¥æ”¶å®¢æˆ·ç«¯å‘é€è¿‡æ¥çš„ä¿¡æ¯
 				while (true) {
 					String message = br.readLine();
 					System.out.println(message);
 				}
 			} else {
-				// ·¢ËÍ´íÎóĞÅÏ¢µ½¿Í»§¶Ë
-				pw.println("err");
+				// å‘é€é”™è¯¯ä¿¡æ¯åˆ°å®¢æˆ·ç«¯
+				pw.println("ERROR");
 			}
 		}catch(Exception e){}
 	}
