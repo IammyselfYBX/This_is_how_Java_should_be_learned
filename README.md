@@ -882,6 +882,20 @@ LinkedList ll = new LinkedList();
 
 ### 三、泛型
 
+### 四、Set
+#### 1.[使用HashSet](Part3获得逻辑能力/3.6Set集合/test2使用HashSet/MyTest.java)
+
+#### 2.[选择排序](Part3获得逻辑能力/3.6Set集合/test3选择排序/MyTest.java)
+
+#### 3.[冒泡排序](Part3获得逻辑能力/3.6Set集合/test4冒泡排序/MyTest.java)
+
+#### 4.[二分查找](Part3获得逻辑能力/3.7试试二分查找，理解二叉树/MyTest.java)
+没有二分查找就没有二叉树。
+
+#### 5.[复制一个目录的内容](Part3获得逻辑能力/3.8复制一个目录的内容/CopyDir.java)
+点击按钮弹出目录对话框——```JFileChooser```
+
+
 ---
 ## 本书实例
 1.[画乌龟](Part1认识Java程序/1.2画乌龟/Turtle.java)
@@ -921,3 +935,9 @@ LinkedList ll = new LinkedList();
 10.[记事本——数组实现](Part3获得逻辑能力/3.1用数组实现的记事本/test10Final/MyNote.java)
 
 ![Final使用数组实现记事本.gif](Part3获得逻辑能力/3.1用数组实现的记事本/test10Final/Final使用数组实现记事本.gif)
+
+11.[复制一个目录的内容](Part3获得逻辑能力/3.8复制一个目录的内容/CopyDir.java)
+
+12.[记事本升级](Part3获得逻辑能力/3.9记事本升级/MyNote.java)
+![记事本升级.gif](Part3获得逻辑能力/3.9记事本升级/记事本升级.gif)
+

@@ -14,6 +14,7 @@ public class MyTest {
 		//验证
 		for(int v : al){
 			System.out.print(v+"\t") ;
- 		}
+		 }
+		System.out.println();
 	}
 }

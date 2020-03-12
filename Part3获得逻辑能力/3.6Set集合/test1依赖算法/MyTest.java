@@ -1,3 +1,7 @@
+/** 
+ * 用算法换数据结构
+ * 使用 ArrayList 实现 Hashset
+*/
 import java.util.*;
 
 public class MyTest {
@@ -18,13 +22,14 @@ public class MyTest {
 				}
 			}
 			if(b){
-				al.add(value) ;
+				al.add(value);
 			}
 		}
 		
 		//验证
 		for(int v : al){
 			System.out.print(v+"\t") ;
- 		}
+		 }
+		 System.out.println();
 	}
 }

@@ -38,7 +38,7 @@ public class MyTest {
 			int midIndex = (minIndex + maxIndex)/2;
 			//找到了
 			if(des == al.get(midIndex)) {
-				System.out.println("找到了，第"+midIndex+"个数") ;
+				System.out.println("找到了，"+des+"是第"+midIndex+"个数") ;
 				break ;
 			}
 			//找到的值大
