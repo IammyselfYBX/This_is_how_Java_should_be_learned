@@ -17,7 +17,7 @@ public class QQServer {
 		ServerSocket ss = new ServerSocket(8000);
 
 		while (true) {
-			System.out.println("服务器正在8000端口监听......");
+			System.out.println("服务器正在3306端口监听......");
 			Socket s = ss.accept();
 
 			MyService t = new MyService();
@@ -59,9 +59,8 @@ public void run() {
 		PrintWriter pw = new PrintWriter(osw, true);
 
 		// 到数据库中验证用户身份
-		Class.forName("org.gjt.mm.mysql.Driver");
-		Connection cn = DriverManager.getConnection(
-			"jdbc:mysql://127.0.0.1:3306/qq", "root", "123456");
+		Class.forName("org.mariadb.jdbc.Driver") ;
+			Connection cn = DriverManager.getConnection("jdbc:mysql://0.0.0.0:3306/QQ","tony","12345") ;
 		PreparedStatement ps = cn
 			.prepareStatement("select * from user where username=? and password=?");
 		ps.setString(1, u);

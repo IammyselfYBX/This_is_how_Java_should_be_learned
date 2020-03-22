@@ -939,5 +939,6 @@ LinkedList ll = new LinkedList();
 11.[复制一个目录的内容](Part3获得逻辑能力/3.8复制一个目录的内容/CopyDir.java)
 
 12.[记事本升级](Part3获得逻辑能力/3.9记事本升级/MyNote.java)
+
 ![记事本升级.gif](Part3获得逻辑能力/3.9记事本升级/记事本升级.gif)
 
